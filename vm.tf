@@ -9,15 +9,15 @@
 #
 # Licensed Materials - Property of IBM
 #
-# ©Copyright IBM Corp. 2017.
+# ©Copyright IBM Corp. 2017
 #
 ################################################################
 variable "hostname" {
-  default = "myLAMP"
+  default = "lamp"
   description = "LAMP stack using IaC"
 }
 variable "domain" {
-  default = "mylamp.dev"
+  default = "IBM.cloud"
   description = "The domain for the instance."
 }
 variable "datacenter" {
@@ -29,11 +29,11 @@ variable "os_reference_code" {
   description = "The operating system reference code used to provision the computing instance."
 }
 variable "cores" {
-  default = "1"
+  default = "2"
   description = "The number of CPU cores to allocate."
 }
 variable "memory" {
-  default = "2048"
+  default = "1024"
   description = "The amount of memory (in Mb) to allocate."
 }
 variable "disk_size" {
