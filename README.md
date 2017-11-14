@@ -1,4 +1,4 @@
-# Infrastructure as Code - LAMP Server Edit
+# Infrastructure as Code - LAMP Server
 
 An IBM Cloud Schematics template to provision a virtual machine instance and provision Apache, MySQL (mariadb), and PHP onto that instance. Schematics uses [Terraform](https://www.terraform.io/) as the infrastructure as code engine. With this template, you can provision and manage infrastructure as a single unit.
 
