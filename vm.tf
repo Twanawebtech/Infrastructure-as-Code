@@ -29,11 +29,11 @@ variable "os_reference_code" {
   description = "The operating system reference code used to provision the computing instance."
 }
 variable "cores" {
-  default = "2"
+  default = "3"
   description = "The number of CPU cores to allocate."
 }
 variable "memory" {
-  default = "1024"
+  default = "2048"
   description = "The amount of memory (in Mb) to allocate."
 }
 variable "disk_size" {
