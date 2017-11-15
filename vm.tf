@@ -33,11 +33,11 @@ variable "cores" {
   description = "The number of CPU cores to allocate."
 }
 variable "memory" {
-  default = "2048"
+  default = "4096"
   description = "The amount of memory (in Mb) to allocate."
 }
 variable "disk_size" {
-  default = "25"
+  default = "100"
   description = "The numeric disk sizes (in GB) for the instance’s block device and disk image settings."
 }
 variable "private_network_only" {
