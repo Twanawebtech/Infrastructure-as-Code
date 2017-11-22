@@ -76,6 +76,10 @@ resource "ibm_compute_ssh_key" "ssh_key" {
     public_key = "${var.ssh_key}"
 }
 
+resource "ibm_object_storage_account" "IaC-object-storage" {
+
+}
+
 resource "ibm_compute_vm_instance" "vm" {
   hostname                 = "${var.hostname}"
   os_reference_code        = "${var.os_reference_code}"
