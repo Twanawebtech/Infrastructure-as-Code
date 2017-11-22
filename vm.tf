@@ -94,22 +94,12 @@ resource "ibm_compute_vm_instance" "vm" {
   user_metadata            = "${file("install.yml")}"
 }
 
-resource "ibm_object_storage_account" "IaC-object-storage" {
-  hostname                 = "${var.hostname}"
-  os_reference_code        = "${var.os_reference_code}"
-  domain                   = "${var.domain}"
-  datacenter               = "${var.datacenter}"
-  network_speed            = "${var.network_speed}"
-  hourly_billing           = true
-  private_network_only     = "${var.private_network_only}"
-  cores                    = "${var.cores}"
-  memory                   = "${var.memory}"
-  disks                    = ["${var.disk_size}"]
-  dedicated_acct_host_only = true
-  local_disk               = false
-  ssh_key_ids              = ["${ibm_compute_ssh_key.ssh_key.id}"]
-  tags                     = ["${var.tags}"]
-  user_metadata            = "${file("install.yml")}"
+variable "object_storage_enabled" {
+    default = 1
+}
+
+resource "ibm_object_storage_account" "lamp_storage" {
+  count = "${var.object_storage_enabled}"
 }
 
 output "public_ip" {
