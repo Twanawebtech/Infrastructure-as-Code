@@ -94,14 +94,6 @@ resource "ibm_compute_vm_instance" "vm" {
   user_metadata            = "${file("install.yml")}"
 }
 
-variable "object_storage_enabled" {
-    default = 1
-}
-
-resource "ibm_object_storage_account" "lamp_storage" {
-  count = "${var.object_storage_enabled}"
-}
-
 output "public_ip" {
 	value = "http://${ibm_compute_vm_instance.vm.ipv4_address}"
 }
